@@ -29,9 +29,9 @@ export const request = (state, { username, password }) => {
 
 
 // successful api lookup
-export const success = (state, action) => {
-  const { payload } = action
-  return state.merge({ fetching: false, error: null, payload })
+export const success = (state, {username}) => {
+  console.log(`Signed in as ${username}`)
+  return state.merge({ fetching: false, error: null })
 }
 
 // Something went wrong somewhere.

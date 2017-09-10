@@ -13,16 +13,13 @@
 import { call, put } from 'redux-saga/effects'
 import AuthActions from '../Redux/AuthRedux'
 
-export function * getAuth (api, action) {
-  const { data } = action
-  // make the call to the api
-  const response = yield call(api.getauth, data)
+export function * authRequest ({username, password}) {
+  console.log(`Saga caught auth request for: ${username}`)
+
 
   // success?
-  if (response.ok) {
-    // You might need to change the response here - do this with a 'transform',
-    // located in ../Transforms/. Otherwise, just pass the data back from the api.
-    yield put(AuthActions.authSuccess(response.data))
+  if (true) {
+    yield put(AuthActions.authSuccess(username))
   } else {
     yield put(AuthActions.authFailure())
   }
