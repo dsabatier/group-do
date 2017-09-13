@@ -17,10 +17,8 @@
 1. cd to the repo
 2. Run Build for either OS
   * for iOS
-    * Run `react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res`
     * run `react-native run-ios`
   * for Android
-    * Run `react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res`
     * run `react-native run-android`
 
 ## :no_entry_sign: Standard Compliant
